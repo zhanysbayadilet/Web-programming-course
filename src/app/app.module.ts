@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ProductsComponent } from './components/products/products.component';
+import { SideBarCartComponent } from './components/side-bar-cart/side-bar-cart.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ProductsComponent } from './components/products/products.component';
     AppComponent,
     MainPageComponent,
     NavBarComponent,
-    ProductsComponent
+    ProductsComponent,
+    SideBarCartComponent
   ],
   imports: [
     BrowserModule,

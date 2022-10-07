@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'online-shop-front';
+  title = 'online-shop-front'
+  toggleStepper = false;
 }

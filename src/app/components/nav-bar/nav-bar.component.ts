@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import { MatDialog } from "@angular/material/dialog";
+import {SideBarCartComponent} from "../side-bar-cart/side-bar-cart.component";
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  @Output() onPlusClick = new EventEmitter<boolean>();
+
+  plusClick() {
+    this.onPlusClick.emit(true);
+  }
 }
