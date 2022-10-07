@@ -12,3 +12,9 @@
 .font-oceanwide{
   font-family: "Oceanwide", Arial, Helvetica, sans-serif;
 }
+
+@layer components {
+  .footer-text {
+    @apply uppercase text-white text-sm tracking-tight opacity-50;
+  }
+}
