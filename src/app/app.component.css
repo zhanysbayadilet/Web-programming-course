@@ -1,5 +1,23 @@
 .side-bar{
-  width: 250px;
+  width: 150px;
   position: fixed;
   left: 0;
 }
+
+.drawer-content{
+  @apply bg-white;
+}
+
+.btn-primary{
+  @apply bg-white border-0 text-black hover:bg-blue-700 hover:text-white mb-[5px];
+}
+
+.btn-secondary{
+  @apply bg-white border-0 text-black p-0;
+}
+
+.menu{
+  @apply bg-white;
+}
+
+
