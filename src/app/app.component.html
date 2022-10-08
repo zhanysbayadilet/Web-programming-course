@@ -1,6 +1,146 @@
-<app-nav-bar (onPlusClick)="toggleStepper = !toggleStepper"></app-nav-bar>
-<app-side-bar-cart class="z-30" *ngIf="toggleStepper"></app-side-bar-cart>
-<router-outlet></router-outlet>
+<mat-drawer-container autosize class="bg-white static">
+
+  <mat-drawer #drawer  mode="over" class="side-bar">
+    <div class="relative">
+      <div class="absolute right-0 p-6">
+        <button type="button" (click)="drawer.toggle()">
+          <mat-icon class="transition ease-in-out hover:rotate-180 duration-300
+                           rounded-full">close</mat-icon>
+        </button>
+      </div>
+    </div>
+
+<!--    <div class="mt-6 col-span-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">-->
+    <div class="flex ml-4 pl-4 mt-24 mr-6 rounded-2xl hover:text-white hover:border-blue-700 hover:bg-blue-700 active:border-blue-400
+                transition ease-in-out hover:-translate-y-1 hover:scale-100 duration-300">
+      <div class="rounded-full text-white flex p-2 bg-blue-700 justify-items-center text-center mr-2">
+        <mat-icon>favorite_border</mat-icon>
+      </div>
+      <button (click)="showFiller = !showFiller">
+        Jeide
+      </button>
+      <p *ngIf="showFiller">
+        <!-- ########### -->
+      </p>
+    </div>
+
+    <div class="flex ml-4 pl-4 mt-3 mr-6 rounded-2xl hover:text-white hover:border-blue-700 hover:bg-blue-700 active:border-blue-400
+                transition ease-in-out hover:-translate-y-1 hover:scale-100 duration-300">
+      <div class="rounded-full text-white flex p-2 bg-blue-700 justify-items-center text-center mr-2">
+        <mat-icon>favorite_border</mat-icon>
+      </div>
+      <button (click)="showFiller = !showFiller">
+        Koilek
+      </button>
+      <p *ngIf="showFiller">
+        <!-- ########### -->
+      </p>
+    </div>
+
+    <div class="flex ml-4 pl-4 mt-3 mr-6 rounded-2xl hover:text-white hover:border-blue-700 hover:bg-blue-700 active:border-blue-400
+                transition ease-in-out hover:-translate-y-1 hover:scale-100 duration-300">
+      <div class="rounded-full text-white flex p-2 bg-blue-700 justify-items-center text-center mr-2">
+        <mat-icon>favorite_border</mat-icon>
+      </div>
+      <button (click)="showFiller = !showFiller">
+        Kenjeide
+      </button>
+      <p *ngIf="showFiller">
+        <!-- ########### -->
+      </p>
+    </div>
+
+    <div class="flex ml-4 pl-4 mt-3 mr-6 rounded-2xl hover:text-white hover:border-blue-700 hover:bg-blue-700 active:border-blue-400
+                transition ease-in-out hover:-translate-y-1 hover:scale-100 duration-300">
+      <div class="rounded-full text-white flex p-2 bg-blue-700 justify-items-center text-center mr-2">
+        <mat-icon>favorite_border</mat-icon>
+      </div>
+      <button (click)="showFiller = !showFiller">
+        Burjeide
+      </button>
+      <p *ngIf="showFiller">
+        <!-- ########### -->
+      </p>
+    </div>
+
+    <div class="flex ml-4 pl-4 mt-3 mr-6 rounded-2xl hover:text-white hover:border-blue-700 hover:bg-blue-700 active:border-blue-400
+                transition ease-in-out hover:-translate-y-1 hover:scale-100 duration-300">
+      <div class="rounded-full text-white flex p-2 bg-blue-700 justify-items-center text-center mr-2">
+        <mat-icon>favorite_border</mat-icon>
+      </div>
+      <button (click)="showFiller = !showFiller">
+        Kurte
+      </button>
+      <p *ngIf="showFiller">
+        <!-- ########### -->
+      </p>
+    </div>
+
+    <div class="flex ml-4 pl-4 mt-3 mr-6 rounded-2xl hover:text-white hover:border-blue-700 hover:bg-blue-700 active:border-blue-400
+                transition ease-in-out hover:-translate-y-1 hover:scale-100 duration-300">
+      <div class="rounded-full text-white flex p-2 bg-blue-700 justify-items-center text-center mr-2">
+        <mat-icon>favorite_border</mat-icon>
+      </div>
+      <button (click)="showFiller = !showFiller">
+        Bottom
+      </button>
+      <p *ngIf="showFiller">
+        <!-- ########### -->
+      </p>
+    </div>
+
+    <div class="flex ml-4 pl-4 mt-3 mr-6 rounded-2xl hover:text-white hover:border-blue-700 hover:bg-blue-700 active:border-blue-400
+                transition ease-in-out hover:-translate-y-1 hover:scale-100 duration-300">
+      <div class="rounded-full text-white flex p-2 bg-blue-700 justify-items-center text-center mr-2">
+        <mat-icon>favorite_border</mat-icon>
+      </div>
+      <button (click)="showFiller = !showFiller">
+        Somke
+      </button>
+      <p *ngIf="showFiller">
+        <!-- ########### -->
+      </p>
+    </div>
+
+    <div class="flex ml-4 pl-4 mt-3 mr-6 rounded-2xl hover:text-white hover:border-blue-700 hover:bg-blue-700 active:border-blue-400
+                transition ease-in-out hover:-translate-y-1 hover:scale-100 duration-300">
+      <div class="rounded-full text-white flex p-2 bg-blue-700 justify-items-center text-center mr-2">
+        <mat-icon>favorite_border</mat-icon>
+      </div>
+      <button (click)="showFiller = !showFiller">
+        Bas kiim
+      </button>
+      <p *ngIf="showFiller">
+        <!-- ########### -->
+      </p>
+    </div>
+
+  </mat-drawer>
+
+  <div class="bg-white">
+    <div class="p-12 pt-6">
+      <div class="flex flex-row">
+        <div class="basis-1/2 flex flex-row justify-items-center">
+          <button type="button" (click)="drawer.toggle()">
+            <mat-icon class="transition ease-in-out hover:-translate-y-1 hover:scale-80 duration-300">menu</mat-icon>
+          </button>
+        </div>
+        <div class="basis-1/5 flex flex-row items-center">
+          <img class="w-[20px] mr-2" src="/assets/img/icons/qr-icon.png" alt="icon">
+          <span class="font-oceanwide uppercase">Qazaq Republic</span>
+        </div>
+        <div class="basis-1/2 flex flex-row-reverse items-center">
+          <mat-icon class="mr-2 opacity-80">perm_identity</mat-icon>
+          <mat-icon class="mr-2 opacity-80">shopping_cart</mat-icon>
+          <mat-icon class="mr-2 opacity-80">favorite_border</mat-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+  <router-outlet class="bg-white"></router-outlet>
+
+</mat-drawer-container>
+
 
 
 
