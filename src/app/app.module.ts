@@ -8,9 +8,12 @@ import { AppComponent } from './app.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ProductsComponent } from './components/products/products.component';
+
+import { SideBarCartComponent } from './components/side-bar-cart/side-bar-cart.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatButtonModule} from "@angular/material/button";
+
 
 
 @NgModule({
@@ -18,7 +21,8 @@ import {MatButtonModule} from "@angular/material/button";
     AppComponent,
     MainPageComponent,
     NavBarComponent,
-    ProductsComponent
+    ProductsComponent,
+    SideBarCartComponent
   ],
   imports: [
     BrowserModule,
