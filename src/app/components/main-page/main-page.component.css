@@ -2,3 +2,7 @@
   background-color: #0C1F42;
 }
 
+.btn-accent{
+  @apply bg-blue-700 text-white rounded-full px-7 py-4 normal-case
+}
+
