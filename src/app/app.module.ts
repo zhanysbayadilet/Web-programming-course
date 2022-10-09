@@ -12,6 +12,8 @@ import { SideBarCartComponent } from './components/side-bar-cart/side-bar-cart.c
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatButtonModule} from "@angular/material/button";
+import {FooterComponent} from "./components/footer/footer.component";
+import { TShirtsComponent } from './components/products/t-shirts/t-shirts.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,10 @@ import {MatButtonModule} from "@angular/material/button";
     MainPageComponent,
     NavBarComponent,
     ProductsComponent,
-    SideBarCartComponent
+    SideBarCartComponent,
+    FooterComponent,
+    FooterComponent,
+    TShirtsComponent
   ],
   imports: [
     BrowserModule,

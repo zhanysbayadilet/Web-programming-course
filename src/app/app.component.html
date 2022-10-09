@@ -9,37 +9,63 @@
       <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content">
         <!-- Navigation -->
-        <div class="bg-white">
-          <div class="p-12 pt-6">
-            <div class="flex flex-row">
-              <div class="basis-1/2 flex flex-row justify-items-center">
-                <label for="my-drawer" class="btn btn-secondary drawer-button">
-                  <mat-icon>menu</mat-icon>
-                </label>
-              </div>
+        <div class="navbar py-2 px-10 fixed glass z-40">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <label for="my-drawer" tabindex="0" class="btn btn-ghost btn-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+              </label>
+            </div>
+          </div>
+          <div class="navbar-center">
+            <a href="/" class="btn btn-ghost p-0 normal-case">
               <div class="basis-1/5 flex flex-row items-center">
                 <img class="w-[20px] mr-2" src="/assets/img/icons/qr-icon.png" alt="icon">
-                <span class="font-oceanwide uppercase text-black">Qazaq Republic</span>
+                <span class="font-oceanwide uppercase text-black opacity-95">Qazaq Republic</span>
               </div>
-              <div class="basis-1/2 flex flex-row-reverse items-center text-black">
-                <mat-icon class="mr-2 opacity-80">perm_identity</mat-icon>
-                <div class="flex flex-row justify-items-center">
-                  <label for="my-drawer-4" class="btn btn-secondary drawer-button">
-                    <mat-icon class="mr-2 opacity-80">shopping_cart</mat-icon>
-                  </label>
+            </a>
+          </div>
+          <div class="navbar-end">
+            <div class="dropdown dropdown-end">
+              <label for="my-drawer-4" tabindex="0" class="btn btn-ghost btn-circle">
+                <div class="indicator">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                  <span class="badge badge-sm indicator-item">1</span>
                 </div>
-                <mat-icon class="mr-2 opacity-80">favorite_border</mat-icon>
-              </div>
+              </label>
+            </div>
+
+            <div class="dropdown dropdown-end">
+              <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                <div class="w-8 rounded-full">
+                  <img src="https://placeimg.com/80/80/people" />
+                </div>
+              </label>
+              <ul tabindex="0" class="menu menu-compact bg-blue-700 text-white dropdown-content mt-3 p-2 shadow-md rounded-box w-52">
+                <li>
+                  <a class="justify-between">
+                    Profile
+                    <span class="badge bg-white text-gray-600 border-0">New</span>
+                  </a>
+                </li>
+                <li><a>Settings</a></li>
+                <li><a>Logout</a></li>
+              </ul>
             </div>
           </div>
         </div>
+
         <!-- Main content -->
-        <router-outlet class="bg-white"></router-outlet>
+        <div class="pt-14">
+          <router-outlet class="bg-white"></router-outlet>
+          <!--footer-->
+          <app-footer></app-footer>
+        </div>
       </div>
 
       <div class="drawer-side">
         <label for="my-drawer-4" class="drawer-overlay"></label>
-        <ul class="overflow-y-auto m-0 p-0 w-[450px]">
+        <ul class="overflow-y-auto w-[450px]">
           <!-- Sidebar content here -->
           <app-side-bar-cart></app-side-bar-cart>
         </ul>
@@ -51,52 +77,22 @@
 <!-- Left side bar -->
   <div class="drawer-side">
     <label for="my-drawer" class="drawer-overlay"></label>
-    <ul class="menu p-4 pt-14 w-[250px] text-base-content items-start">
+    <ul class="overflow-y-auto flex-col items-center p-8 w-[250px] border-r-2 bg-white ">
       <!-- Sidebar content here -->
+      <div>
       <li>
-        <button class="btn btn-primary">
-          <mat-icon>favorite_border</mat-icon>
-          <p>Jeide</p>
-        </button>
+        <a href="products" class="btn btn-primary">
+          <div class="bg-blue-700 rounded-full w-9 h-9 flex justify-center pt-[6px] mr-2">
+            <div class="text-white">
+              <mat-icon>favorite_border</mat-icon>
+            </div>
+          </div>
+          <p>All</p>
+        </a>
       </li>
-      <li >
-        <button class="btn btn-primary">
-          <mat-icon>favorite_border</mat-icon>
-          <p>Koilek</p>
-        </button>
-      </li>
-      <li>
-        <button class="btn btn-primary">
-          <mat-icon>favorite_border</mat-icon>
-          <p>Kenjeide</p>
-        </button>
-      </li>
-      <li>
-        <button class="btn btn-primary">
-          <mat-icon>favorite_border</mat-icon>
-          <p>Burjeide</p>
-        </button>
-      </li>
-      <li>
-        <button class="btn btn-primary">
-          <mat-icon>favorite_border</mat-icon>
-          <p>Kurte</p>
-        </button>
-      </li>
-      <li>
-        <button class="btn btn-primary">
-          <mat-icon>favorite_border</mat-icon>
-          <p>Bottom</p>
-        </button>
-      </li>
-      <li>
-        <button class="btn btn-primary">
-          <mat-icon>favorite_border</mat-icon>
-          <p>Somke</p>
-        </button>
-      </li>
+
+      </div>
     </ul>
   </div>
 </div>
-
 
