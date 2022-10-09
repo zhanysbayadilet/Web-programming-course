@@ -2,32 +2,53 @@
   <input id="my-drawer" type="checkbox" class="drawer-toggle" />
 
   <div class="drawer-content">
-    <!-- Page content here -->
-    <!-- Navigation -->
-    <div class="bg-white">
-      <div class="p-12 pt-6">
-        <div class="flex flex-row">
-          <div class="basis-1/2 flex flex-row justify-items-center">
-            <label for="my-drawer" class="btn btn-secondary drawer-button">
-              <mat-icon>menu</mat-icon>
-            </label>
-          </div>
-          <div class="basis-1/5 flex flex-row items-center">
-            <img class="w-[20px] mr-2" src="/assets/img/icons/qr-icon.png" alt="icon">
-            <span class="font-oceanwide uppercase text-black">Qazaq Republic</span>
-          </div>
-          <div class="basis-1/2 flex flex-row-reverse items-center text-black">
-            <mat-icon class="mr-2 opacity-80">perm_identity</mat-icon>
-            <mat-icon class="mr-2 opacity-80">shopping_cart</mat-icon>
-            <mat-icon class="mr-2 opacity-80">favorite_border</mat-icon>
+<!-- Page content here -->
+
+    <!-- Right side bar -->
+    <div class="drawer drawer-end">
+      <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+      <div class="drawer-content">
+        <!-- Navigation -->
+        <div class="bg-white">
+          <div class="p-12 pt-6">
+            <div class="flex flex-row">
+              <div class="basis-1/2 flex flex-row justify-items-center">
+                <label for="my-drawer" class="btn btn-secondary drawer-button">
+                  <mat-icon>menu</mat-icon>
+                </label>
+              </div>
+              <div class="basis-1/5 flex flex-row items-center">
+                <img class="w-[20px] mr-2" src="/assets/img/icons/qr-icon.png" alt="icon">
+                <span class="font-oceanwide uppercase text-black">Qazaq Republic</span>
+              </div>
+              <div class="basis-1/2 flex flex-row-reverse items-center text-black">
+                <mat-icon class="mr-2 opacity-80">perm_identity</mat-icon>
+                <div class="flex flex-row justify-items-center">
+                  <label for="my-drawer-4" class="btn btn-secondary drawer-button">
+                    <mat-icon class="mr-2 opacity-80">shopping_cart</mat-icon>
+                  </label>
+                </div>
+                <mat-icon class="mr-2 opacity-80">favorite_border</mat-icon>
+              </div>
+            </div>
           </div>
         </div>
+        <!-- Main content -->
+        <router-outlet class="bg-white"></router-outlet>
+      </div>
+
+      <div class="drawer-side">
+        <label for="my-drawer-4" class="drawer-overlay"></label>
+        <ul class="overflow-y-auto m-0 p-0 w-[450px]">
+          <!-- Sidebar content here -->
+          <app-side-bar-cart></app-side-bar-cart>
+        </ul>
       </div>
     </div>
-    <!-- Main content -->
-    <router-outlet class="bg-white"></router-outlet>
+
   </div>
 
+<!-- Left side bar -->
   <div class="drawer-side">
     <label for="my-drawer" class="drawer-overlay"></label>
     <ul class="menu p-4 pt-14 w-[250px] text-base-content items-start">
@@ -76,7 +97,6 @@
       </li>
     </ul>
   </div>
-
 </div>
 
 
