@@ -14,6 +14,7 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatButtonModule} from "@angular/material/button";
 import {FooterComponent} from "./components/footer/footer.component";
 import { TShirtsComponent } from './components/products/t-shirts/t-shirts.component';
+import { TShirtDeteilsComponent } from './components/products/t-shirts/t-shirt-deteils/t-shirt-deteils.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TShirtsComponent } from './components/products/t-shirts/t-shirts.compon
     SideBarCartComponent,
     FooterComponent,
     FooterComponent,
-    TShirtsComponent
+    TShirtsComponent,
+    TShirtDeteilsComponent
   ],
   imports: [
     BrowserModule,
